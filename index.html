@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo1.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Cafeteria Imperial</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+    <header class="header">
+        <div class="header-inner">
+            <a href="#home" class="logo" aria-label="Cafeteria Imperial - início">
+                <img src="./img/logoentrada.jpg" alt="Logo da Cafeteria Imperial">
+            </a>
+
+            <nav class="navbar" id="main-navigation" aria-label="Navegação principal" tabindex="-1">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#menu">Menu</a>
+                <a href="#review">Avaliações</a>
+                <a href="#address">Endereço</a>
+            </nav>
+
+            <div class="icons">
+                <details class="accessibility-control">
+                    <summary class="accessibility-toggle" aria-controls="accessibility-panel">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="5" r="2"></circle>
+                            <path d="M4 9h16M12 9v5m0 0-5 7m5-7 5 7"></path>
+                        </svg>
+                        <span>Acessibilidade</span>
+                        <span class="accessibility-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accessibility-panel" id="accessibility-panel">
+                        <p class="accessibility-panel-title">Ajustes de acessibilidade</p>
+                        <p class="accessibility-panel-description">Personalize a leitura e o contraste do site.</p>
+                        <div class="font-controls" role="group" aria-label="Tamanho do texto">
+                            <button type="button" id="font-decrease" aria-label="Diminuir tamanho do texto">A− <span>Menor</span></button>
+                            <span id="font-size-value" aria-live="polite">100%</span>
+                            <button type="button" id="font-increase" aria-label="Aumentar tamanho do texto">A+ <span>Maior</span></button>
+                        </div>
+                        <button type="button" id="contrast-toggle" aria-pressed="false">
+                            Ativar alto contraste
+                        </button>
+                        <button type="button" id="accessibility-reset">Restaurar padrão</button>
+                        <p class="keyboard-help">
+                            Atalhos: Alt+1 conteúdo, Alt+2 menu e Alt+3 rodapé.
+                        </p>
+                        <p id="accessibility-status" class="visually-hidden" role="status" aria-live="polite"></p>
+                    </div>
+                </details>
+                <div class="search-control">
+                    <button id="btn-search" class="icon-btn" type="button" aria-label="Abrir busca"
+                        aria-controls="search-form" aria-expanded="false">
+                        <img width="30" height="30"
+                            src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" alt="">
+                    </button>
+                    <form class="search-form" id="search-form" hidden>
+                        <label class="visually-hidden" for="search-input">Buscar produtos no menu</label>
+                        <input type="search" id="search-input" placeholder="Buscar no menu (ex: cappuccino)">
+                    </form>
+                </div>
+                <button type="button" id="btn-cart" class="icon-btn" aria-label="Abrir carrinho"
+                    aria-controls="cart-drawer" aria-expanded="false">
+                    <img width="34" height="34" src="https://img.icons8.com/windows/32/FFFFFF/shopping-cart.png"
+                        alt="">
+                    <span id="cart-count" role="status" aria-label="Itens no carrinho">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+    <div class="home-container">
+        <section id="home">
+            <div class="content">
+                <h1>O MELHOR CAFÉ DO CENTRO-OESTE</h1>
+                <p>
+                    No Café Imperial, cada xícara é preparada com grãos 100% arábico,
+                    selecionados nas melhores fazendas do Brasil. Nossa torra artesanal
+                    diária garante um aroma marcante e um sabor equilibrado com notas de
+                    chocolate e caramelo. Mais que um café é uma experiência imperial
+                    que você não encontra em outro lugar da região.
+                </p>
+                <a href="#menu" class="btn">Pegue o seu Agora</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="about" id="about">
+        <h2 class="title">Sobre <span>Nós</span></h2>
+        <div class="row">
+            <div class="container-img">
+                <video src="./img/sobre.mp4" autoplay loop muted playsinline
+                    class="about-video" aria-label="Vídeo apresentando a cafeteria">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+            </div>
+            <div class="content">
+                <h3>O que faz o nosso café ser especial?</h3>
+                <p>Nosso segredo não está só no grão. Está no tempo que dedicamos para escolher cada fornecedor, na água
+                    com a temperatura exata e no barista que conhece seu nome. Aqui, cada xícara é feita para ser especial.
+                </p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu" tabindex="-1">
+        <h2 class="title">Nosso <span>Menu</span></h2>
+
+        <div class="menu-filters" role="group" aria-label="Filtrar produtos por categoria">
+            <button type="button" class="btn menu-filter" data-category="all" aria-pressed="true">Todos</button>
+            <button type="button" class="btn menu-filter" data-category="quente" aria-pressed="false">Cafés quentes</button>
+            <button type="button" class="btn menu-filter" data-category="gelado" aria-pressed="false">Gelados</button>
+        </div>
+        <div class="box-container" id="product-list"></div>
+        <p id="no-results" hidden>Nenhum item encontrado.</p>
+        <p id="cart-status" class="visually-hidden" aria-live="polite"></p>
+    </section>
+
+    <section class="review" id="review">
+        <div class="review-invite">
+            <p>Já tomou um café com a gente? Conte como foi sua experiência pelo Instagram.</p>
+            <a class="btn review-instagram-link" href="https://ig.me/m/ipcam9914" target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enviar uma avaliação para a Cafeteria Imperial pelo Instagram, abre em nova aba">
+                Enviar avaliação pelo Instagram
+            </a>
+        </div>
+    </section>
+
+    <section class="address" id="address">
+        <h2 class="title">Nosso <span>Endereço</span></h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.441063026701!2d-47.954959489408665!3d-15.833399335327902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3029eaad68b7%3A0xc4985755bc8593cc!2sParkShopping!5e0!3m2!1spt-BR!2sbr!4v1793244470550!5m2!1spt-BR!2sbr"
+            width="100%" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin" title="Mapa da Cafeteria Imperial"></iframe>
+    </section>
+
+    </main>
+    <footer class="footer" id="site-footer" tabindex="-1">
+        <nav class="social-links" aria-label="Redes sociais e contato">
+            <a href="privacidade.html" aria-label="Aviso de Privacidade">
+                <span>Privacidade</span>
+            </a>
+            <a href="https://www.instagram.com/ipcam9914/" target="_blank" rel="noopener noreferrer"
+                aria-label="Visitar Instagram da Cafeteria Imperial (abre em nova aba)">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle class="social-icon-dot" cx="18" cy="6" r="1"></circle>
+                </svg>
+                <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/5561981723197" target="_blank" rel="noopener noreferrer"
+                aria-label="Conversar com a Cafeteria Imperial pelo WhatsApp (abre em nova aba)">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.5-4.7a8.5 8.5 0 1 1 16-4.1Z"></path>
+                    <path d="M8.7 8.2c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4 0 .6l-.5.6c-.2.2-.2.4-.1.6.4.7 1 1.4 1.7 1.8.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.9.6-.7-.1-1.6-.4-2.7-1.1-1.4-.9-2.3-2-2.9-2.8-.5-.8-.8-1.6-.8-2.3 0-.7.4-1.1.6-1.3Z"></path>
+                </svg>
+                <span>WhatsApp</span>
+            </a>
+        </nav>
+        <p class="footer-credit">© 2026 Estácio</p>
+    </footer>
+
+    <dialog id="image-preview" class="image-preview" aria-labelledby="image-preview-title">
+        <h2 id="image-preview-title" class="visually-hidden">Imagem ampliada do produto</h2>
+        <button type="button" id="image-preview-close" class="image-preview-close" aria-label="Fechar imagem ampliada">✕</button>
+        <img id="image-preview-image" src="" alt="">
+    </dialog>
+
+    <!-- CARRINHO -->
+    <div id="cart-overlay" aria-hidden="true"></div>
+
+    <aside id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title"
+        aria-hidden="true" inert>
+        <div class="cart-header">
+            <h2 id="cart-title">Seu Pedido</h2>
+            <button type="button" id="cart-close" aria-label="Fechar carrinho">✕</button>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+            <label for="customer-name">Seu nome <span aria-hidden="true">*</span></label>
+            <input type="text" id="customer-name" autocomplete="name" required>
+            <label for="customer-note">Observações (opcional)</label>
+            <textarea id="customer-note" rows="2"
+                placeholder="Ex.: sem açúcar, endereço de entrega"></textarea>
+            <p id="pickup-code-result" class="pickup-code-result" role="status" aria-live="polite" hidden>
+                Código para retirada: <strong id="pickup-code"></strong>
+                <span>Guarde este código e informe na retirada.</span>
+            </p>
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button type="button" id="cart-checkout" class="btn">Enviar pedido pelo WhatsApp</button>
+            <p class="privacy-notice">
+                O pedido e a disponibilidade dos produtos só serão confirmados pelo WhatsApp; este site não processa pagamentos.
+                Ao continuar, os dados do pedido serão preparados para envio pelo WhatsApp.
+                Consulte o <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidade</a>.
+            </p>
+        </div>
+    </aside>
+
+    <script src="accessibility.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
